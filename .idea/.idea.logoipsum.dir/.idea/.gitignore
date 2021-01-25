@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.logoipsum.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\Marian\Desktop\bf training\logoipsum\.idea\.idea.logoipsum.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

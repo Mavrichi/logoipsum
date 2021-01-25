@@ -1,0 +1,400 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-dark-green: #1B2C07;
+    --color-grey1: #0000000D;
+    --color-grey2: #F5FCED;
+    --color-black: #000000;
+    --color-grey3: #F3F3F3;
+    --color-grey4: #BDBDBD;
+    --color-light-black: #1F1F1F;
+    --color-orange: #FF5523;
+    --color-light-green: #5DB700;
+    --color-red: #FF3A00;
+    background-color: red;
+}
+
+body {
+    margin: 0;
+    font-family: "Lora";
+    font-size: 16px;
+
+}
+
+nav {
+    top: 0;
+    left: 0;
+    position: sticky;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    color: white;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: "Monsterrat";
+    background-color: #1987548f;
+
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    column-gap: 20px;
+    margin: 0;
+
+}
+
+.banner-carousel {
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#carousel1 {
+    background-image: url("./assets/adam-vradenburg-sWAAhaoVuko-unsplash.png");
+}
+
+.slider-container {
+    position: absolute;
+}
+
+.button1 {
+    color: white;
+    background-color: var(--color-light-green);
+    width: 259px;
+    height: 39px;
+    font-size: 16px;
+    border: none;
+}
+
+.empty-space {
+    height: 100vh;
+}
+
+.text-container {
+    width: 60%;
+    margin: 0 auto;
+    font-family: "Lora";
+    font-size: 24px;
+    padding: 5rem;
+
+
+}
+
+.inner-text-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.text-with-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.section2 {
+    color: var(--color-dark-green);
+    background-color: var(--color-grey2);
+    padding: 5rem;
+
+}
+
+.section2-h1 {
+    font-family: Monsterrat;
+    font-size: 51px;
+    font-weight: 800;
+}
+
+.section2-p {
+    text-align: center;
+    font-family: "Lora";
+    font-size: 24px;
+}
+
+
+.section3 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.icon-div {
+    display: grid;
+    margin: 0 auto;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    width: 22rem;
+    gap: 1.5rem;
+}
+
+.img-text h1 {
+    font-size: 24px;
+    font-family: "Segoe UI";
+    font-weight: bolder;
+}
+
+.img-text {
+    width: 20rem;
+}
+
+.img-text p {
+    font-size: 16px;
+    font-family: "Lora";
+    font-weight: 600;
+}
+
+.section4 {
+    width: 100%;
+    display: flex;
+    background-image: url("./assets/geran-de-klerk-qzgN45hseN0-unsplash (1).png ");
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured h1 {
+    font-size: 51px;
+    font-family: Monsterrat;
+    font-weight: bolder;
+}
+
+#featured-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+.product-card {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border: 2px solid #F3F3F3;
+}
+
+.product-card img {
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+
+}
+
+.product-imfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-imfo h1 {
+    font-size: 16px;
+    font-family: "Monsterrat";
+    font-weight: 900;
+}
+
+.product-imfo p {
+    font-size: 16px;
+    font-family: 'Lora';
+    font-weight: 600;
+}
+
+.button2 {
+    background-color: var(--color-orange);
+    color: white;
+    height: 3em;
+    margin: 0;
+    width: 6rem;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: "Lora";
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.button2:hover {
+    background-color: #bc5400;
+    color: white;
+}
+
+.section {
+    padding: 2em;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 6em;
+    width: 96em;
+}
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60rem;
+
+}
+
+.text_container h1 {
+    font-size: 51px;
+    font-family: Monsterrat;
+    font-weight: bolder;
+}
+
+.text_container button {
+    margin-top: 1rem;
+
+}
+
+.text_container p {
+    font-size: 16px;
+    font-family: 'Lora';
+    font-weight: 600;
+}
+
+.image_container {
+    max-height: 100%;
+}
+
+.image_container2 {
+    max-height: 100%;
+    order: 2;
+}
+
+.image {
+    width: 32em;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    position: absolute;
+    color: #f0f2f7;
+    z-index: 2;
+
+}
+
+.video-overlay {
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+    background: black;
+    opacity: 0.31;
+}
+
+.newsletter {
+    margin-top: 3rem;
+    margin-left: 12rem;
+    width: 40%;
+}
+
+.newsletter-h1 {
+    font-size: 51px;
+    font-family: Monsterrat;
+    font-weight: bolder;
+}
+
+.newsletter-p {
+    font-size: 16px;
+    font-family: 'Lora';
+    font-weight: 600;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 28rem;
+}
+
+input::placeholder {
+    text-align: left;
+    font: italic normal normal 16px/21px Lora;
+    letter-spacing: 0px;
+    color: #BDBDBD;
+    opacity: 1;
+}
+
+.button3 {
+    background-color: var(--color-orange);
+    color: white;
+    height: 3em;
+    margin: 0;
+    width: 17rem;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: "Lora";
+    font-weight: 400;
+}
+
+footer {
+    color: white;
+    background-color: #1F1F1F;
+    padding: 1rem;
+
+}
+
+.footer-p {
+    margin-left: 9%;
+    font-size: 16px;
+    font-family: 'Lora';
+    font-weight: 600;
+    margin-top: 10px;
+
+}
+
+.glide__arrow .glide__arrow--right {
+    border: none !important;
+}
