@@ -33,6 +33,8 @@ const templateFeaturedSlider = Handlebars.compile('<div class="glide2">\n' +
     '  </div>' +
     '</div>');
 
+
+
 const template = Handlebars.compile('{{#each product}} <div class="product-card"> <img class="product-image" src=`{{img}}` alt="product-image"> <div class="product-imfo"><h1>{{title}}</h1> <p>{{price}}EUR</p> <button class="button2">Buy now</button> </div></div> {{/each}}');
 var appEl = document.getElementById('app');
 var featuredEl = document.getElementById('featured-products');
