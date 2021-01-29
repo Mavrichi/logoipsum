@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 title: "Test Copac 3",
                 price: "303 EUR",
                 img: "./assets/jonathan-adams-p9vy4WxK7k0-unsplash.png"
-            }, {
+            }, {kjmnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
                 title: "Test Copac 4",
                 price: "304 EUR",
                 im: "src=",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    const templateHandlebars = '{{#each product}} <div class="product-card"> <img class="product-image" src="{{img}}" alt="product-image"> <div class="product-imfo"><h1>{{title}}</h1> <p>{{price}}EUR</p> <button class="button2">Buy now</button> </div></div> {{/each}}'
+    const templateHandlebars = '{{#each product}} <div class="product-card"> <img class="product-image img-fluid" src="{{img}}" alt="product-image"> <div class="product-imfo"><h1>{{title}}</h1> <p>{{price}}EUR</p> <button class="button2">Buy now</button> </div></div> {{/each}}'
     const template = Handlebars.compile(templateHandlebars);
     var appEl = document.getElementById('app');
     // var featuredEl = document.querySelector('#featured-products .featured-products__container');
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
         '{{#each product}} <li class="glide__slide"> <div><div class="product-card"> <img class="product-image img-fluid" src="{{img}}" alt="product-image"> <div class="product-imfo"><h1>{{title}}</h1> <p>{{price}}EUR</p> <button class="button2">Buy now</button> </div></div></div> </li>{{/each}}'
         + ' </ul>\n' +
         '  </div>\n' +
-        ' <div class="glide__arrows" data-glide-el="controls">\n' +
-        '    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>\n' +
-        '    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>\n' +
-        '  </div>' +
+        /* ' <div class="glide__arrows arrows2" data-glide-el="controls">\n' +
+         '    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>\n' +
+         '    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>\n' +
+         '  </div>' +*/
         '</div>';
     const templateFeaturedSlider = Handlebars.compile(featuredTemplate);
     featuredEl.innerHTML = templateFeaturedSlider({
@@ -114,17 +114,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const config2 = {
         type: "carousel",
         perView: 4,
-        // breakpoints: {
-        //     1024: {
-        //         perView: 3
-        //     },
-        //     600: {
-        //         perView: 2
-        //     },
-        //     400: {
-        //         perView: 1
-        //     }
-        // }
+        autoplay: 2000,
+        gap: 30,
+        breakpoints: {
+            1024: {
+                perView: 3
+            },
+            600: {
+                perView: 2
+            },
+            400: {
+                perView: 1
+            }
+        }
     };
     new Glide('.glide2', config2).mount()
 

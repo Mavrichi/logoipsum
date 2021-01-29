@@ -90,10 +90,11 @@ img {
     height: 39px;
     font-size: 16px;
     border: none;
+    margin-top: 10px;
 }
 
 .empty-space {
-    height: 100vh;
+    height: 93vh;
 }
 
 .text-container {
@@ -154,11 +155,14 @@ img {
 
 
 .section3 {
+    display: table;
     width: 60%;
     margin: 0 auto;
+    padding: 7rem;
 }
 
 .icon-div {
+    gap: 3rem;
     display: grid;
     margin: 0 auto;
     place-items: center;
@@ -184,7 +188,7 @@ img {
 
 .img-text p {
     font-size: 16px;
-    font-family: "Lora";
+    font-family: 'Lora';
     font-weight: 600;
 }
 
@@ -192,6 +196,51 @@ img {
     width: 100%;
     display: flex;
     background-image: url("./assets/geran-de-klerk-qzgN45hseN0-unsplash (1).png ");
+    padding: 6rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide__text {
+    font-family: "Lora";
+    font-size: 41px;
+    font-style: italic;
+}
+
+.slide__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 71px;
+}
+
+.slide__container {
+    max-width: 1080px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.slide__backdrop img {
+    display: block;
+    object-fit: cover;
+    width: 100% !important;
+}
+
+.slide__item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: minmax(100vw, 1fr);
+}
+
+.slide__content {
+    grid-area: 1/1/2/2;
+    z-index: 0;
+}
+
+.slide__backdrop {
+    grid-area: 1/1/2/2;
+    overflow: hidden;
+    height: 950px;
 }
 
 #app {
@@ -200,7 +249,7 @@ img {
     align-items: center;
     margin: 0 auto;
     padding: 1rem;
-    gap: 1rem;
+    gap: 2rem;
 
 }
 
@@ -213,7 +262,7 @@ img {
     font-size: 51px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-    margin: 0 auto;
+    text-align: center;
 }
 
 .featured-products__container {
@@ -246,9 +295,6 @@ img {
 }
 
 .product-card img {
-    height: 300px;
-    width: 300px;
-    background-color: blue;
 
 }
 
@@ -291,14 +337,8 @@ img {
 }
 
 .section {
-    padding: 2em;
-}
-
-.container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 7rem 2rem 7rem 2rem;
+    margin-bottom: 4rem;
 }
 
 .grid_container {
@@ -358,8 +398,12 @@ img {
     position: absolute;
     color: #f0f2f7;
     z-index: 2;
-
+    max-width: 1050px;
+    font-size: 31px;
+    font-family: 'Lora';
+    text-align: center;
 }
+
 
 .video-overlay {
     height: 100vh;
@@ -374,6 +418,8 @@ img {
     margin-top: 3rem;
     margin-left: 12rem;
     width: 40%;
+    margin-bottom: 4rem;
+
 }
 
 .newsletter-h1 {
