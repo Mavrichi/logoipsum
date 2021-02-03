@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 title: "Test Copac 3",
                 price: "303 EUR",
                 img: "./assets/jonathan-adams-p9vy4WxK7k0-unsplash.png"
-            }, {kjmnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+            }, {
                 title: "Test Copac 4",
                 price: "304 EUR",
                 im: "src=",
@@ -57,10 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
         '{{#each product}} <li class="glide__slide"> <div><div class="product-card"> <img class="product-image img-fluid" src="{{img}}" alt="product-image"> <div class="product-imfo"><h1>{{title}}</h1> <p>{{price}}EUR</p> <button class="button2">Buy now</button> </div></div></div> </li>{{/each}}'
         + ' </ul>\n' +
         '  </div>\n' +
-        /* ' <div class="glide__arrows arrows2" data-glide-el="controls">\n' +
-         '    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>\n' +
-         '    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>\n' +
-         '  </div>' +*/
+        ' <div class="glide__arrows arrows2" data-glide-el="controls">\n' +
+        '    <button class="glide__arrow glide__arrow--left custom__glide-arrow" data-glide-dir="<"><span class="iconify"\n' +
+        '                                                                                     data-icon="ion-arrow-back-sharp"\n' +
+        '                                                                                     data-inline="false"></span></button>\n' +
+        '    <button class="glide__arrow glide__arrow--right custom__glide-arrow" data-glide-dir=">"><span class="iconify"\n' +
+        '                                                                                      data-icon="ion-arrow-forward-sharp"\n' +
+        '                                                                                      data-inline="false"></span></button>\n' +
+        '  </div>' +
         '</div>';
     const templateFeaturedSlider = Handlebars.compile(featuredTemplate);
     featuredEl.innerHTML = templateFeaturedSlider({
@@ -117,13 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
         autoplay: 2000,
         gap: 30,
         breakpoints: {
-            1024: {
+
+            1224: {
                 perView: 3
             },
-            600: {
+            770: {
                 perView: 2
             },
-            400: {
+            570: {
                 perView: 1
             }
         }

@@ -21,7 +21,7 @@
 <body>
 <nav id="nav">
     <div class="logo">
-        <img src="./assets/logo-7.svg" alt="Logo">
+        <img src="./assets/logo-7.svg" class="img-fluid" alt="Logo">
     </div>
     <div class="middle-header">
         <ul class="pages">
@@ -39,18 +39,49 @@
     <div class="buttons-menu">
         <ul>
             <li><a href="#"><img src="./assets/person-sharp%20(1).svg" alt="person"></a></li>
-            <li><a href="#"><img src="./assets/cart-sharp%20(1).svg" alt="cart"></a></li>
-            <li><a href="#"><img src="./assets/menu-sharp.svg" alt="menu"></a></li>
+            <li><a href="javascript:void(0);" onclick="toggleCartModal()"><img src="./assets/cart-sharp%20(1).svg"
+                                                                               alt="cart"></a></li>
+            <li><a href="javascript:void(0);" onclick="toggleSideMenu()"><img src="./assets/menu-sharp.svg" alt="menu"></a>
+            </li>
         </ul>
     </div>
 </nav>
+<div id="side-menu">
+    <div class="container px-4 py-3">
+        <div class="logo side-menu-logo d-flex gap-3">
+            <img src="./assets/logo-7.svg" class="img-fluid" alt="Logo">
+            <button class="close-modal__btn" onclick="toggleSideMenu()">X</button>
+        </div>
+        <ul class="side-menu__ul">
+            <li class="side-menu__li"><span class="li__text"><a href="#">Products</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Blog</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Gallery</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Newsletter</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Lorem Ipsum</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Contact Us</a></span></li>
+        </ul>
+    </div>
+</div>
+<div id="cart-modal">
+    <div class="container px-4 py-3">
+        <button class="close-modal__btn" onclick="toggleCartModal()">X</button>
+        <ul class="side-menu__ul">
+            <li class="side-menu__li"><span class="li__text"><a href="#">Products</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Blog</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Gallery</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Newsletter</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Lorem Ipsum</a></span></li>
+            <li class="side-menu__li"><span class="li__text"><a href="#">Contact Us</a></span></li>
+        </ul>
+    </div>
+</div>
 <section class="banner-carousel">
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 <li class="glide__slide">
                     <div class="d-block w-100">
-                        <div class="slide__item">
+                        <div class="slide__item container">
                             <div class="slide__content">
                                 <div class="slide__container">
                                     <h1 class="slide__title">Nunc varius ante nec justo bibendum, sit amet</h1>
@@ -59,7 +90,7 @@
                                             Fusce id turpis in justo ultricies maximus tincidunt id est
                                         </p>
                                     </div>
-                                    <button class="button1">Find out how you can help <img
+                                    <button class="button1"><span>Find out how you can help </span><img
                                             src="./assets/add-sharp%20(1)-1.svg" alt="add sign"></button>
                                 </div>
                             </div>
@@ -103,7 +134,7 @@
                                             Fusce id turpis in justo ultricies maximus tincidunt id est
                                         </p>
                                     </div>
-                                    <button class="button1">Find out how you can help <img
+                                    <button class="button1"><span>Find out how you can help </span><img
                                             src="./assets/add-sharp%20(1)-1.svg" alt="add sign"></button>
                                 </div>
                             </div>
@@ -135,26 +166,31 @@
         </div>
     </div>
 </section>
-<div class="empty-space"></div>
 <section class="text-container">
-    <div class="inner-text-container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare sollicitudin velit, ut vehicula tellus
-            varius vel. Quisque imperdiet facilisis metus, quis aliquet augue sollicitudin quis. Cras sed dui urna.
-            Suspendisse id molestie massa, vitae molestie dui. Aliquam molestie tellus sed est condimentum, tempor
-            mollis felis rutrum. Fusce sapien dolor, consectetur ut nunc et, condimentum dictum mauris. Aenean posuere
-            dolor id ante ultrices, eget vulputate odio sodales. Suspendisse et massa at nisi commodo ultricies id in
-            lectus. Curabitur ut quam at turpis interdum rutrum. Proin ut risus eros. Vivamus ac enim ligula.</p>
-        <p>Nulla
-            consectetur sit amet elit at euismod. Phasellus dictum nibh in ex consectetur, quis sollicitudin sem
-            tristique. Mauris placerat vitae quam a faucibus. Integer pretium, ipsum non luctus mollis, nisl urna
-            maximus nulla, nec efficitur justo dolor id sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse at accumsan neque, maximus mattis sapien. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Donec venenatis vulputate nibh, quis vestibulum massa auctor sit
-            amet. Fusce scelerisque cursus purus nec pretium. In varius hendrerit vulputate. Nulla ac tellus mi. In
-            malesuada volutpat volutpat. Donec dignissim quam ac nisi fringilla laoreet. Proin laoreet sed ex at
-            ullamcorper.</p>
-        <button class="button1">Find out how you can help <img src="./assets/add-sharp%20(1)-1.svg"
-                                                               alt="add sign"></button>
+    <div class="container">
+        <div class="inner-text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare sollicitudin velit, ut vehicula tellus
+                varius vel. Quisque imperdiet facilisis metus, quis aliquet augue sollicitudin quis. Cras sed dui urna.
+                Suspendisse id molestie massa, vitae molestie dui. Aliquam molestie tellus sed est condimentum, tempor
+                mollis felis rutrum. Fusce sapien dolor, consectetur ut nunc et, condimentum dictum mauris. Aenean
+                posuere
+                dolor id ante ultrices, eget vulputate odio sodales. Suspendisse et massa at nisi commodo ultricies id
+                in
+                lectus. Curabitur ut quam at turpis interdum rutrum. Proin ut risus eros. Vivamus ac enim ligula.</p>
+            <p>Nulla
+                consectetur sit amet elit at euismod. Phasellus dictum nibh in ex consectetur, quis sollicitudin sem
+                tristique. Mauris placerat vitae quam a faucibus. Integer pretium, ipsum non luctus mollis, nisl urna
+                maximus nulla, nec efficitur justo dolor id sem. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.
+                Suspendisse at accumsan neque, maximus mattis sapien. Class aptent taciti sociosqu ad litora torquent
+                per
+                conubia nostra, per inceptos himenaeos. Donec venenatis vulputate nibh, quis vestibulum massa auctor sit
+                amet. Fusce scelerisque cursus purus nec pretium. In varius hendrerit vulputate. Nulla ac tellus mi. In
+                malesuada volutpat volutpat. Donec dignissim quam ac nisi fringilla laoreet. Proin laoreet sed ex at
+                ullamcorper.</p>
+            <button class="button1"><span>Find out how you can help </span><img
+                    src="./assets/add-sharp%20(1)-1.svg" alt="add sign"></button>
+        </div>
     </div>
 </section>
 <section class="section2">
@@ -170,7 +206,7 @@
     </div>
 </section>
 <section class="section3">
-    <div class="container">
+    <div class="container__wide">
         <div class="icon-div">
             <div class="icon-text">
                 <img src="assets/rainy-sharp.svg" alt="rainy cloud">
@@ -202,14 +238,14 @@
     </div>
 </section>
 <section class="section4">
-    <div class="container">
+    <div class="container__wide">
         <div id="app">
             <img src="./assets/jonathan-adams-p9vy4WxK7k0-unsplash.png" alt="test image ">
         </div>
     </div>
 </section>
 <section class="section" style="background-color:#f3f3f3">
-    <div class="d-flex justify-content-center">
+    <div class="container__wide">
         <div class="grid_container">
             <div class="image_container">
                 <img src="./assets/kamil-kalbarczyk-09mTGfqKZ-s-unsplash.png" alt="trees" class="image">
@@ -230,15 +266,15 @@
                     consectetur adipiscing elit. Suspendisse at accumsan neque, maximus mattis sapien. Class aptent
                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 </p>
-                <button class="button1">Find out how you can help <img src="./assets/add-sharp%20(1)-1.svg"
-                                                                       alt="add sign"></button>
+                <button class="button1"><span>Find out how you can help </span><img
+                        src="./assets/add-sharp%20(1)-1.svg" alt="add sign"></button>
             </div>
         </div>
     </div>
 </section>
 <section class="section">
-    <div class="d-flex justify-content-center">
-        <div class="grid_container">
+    <div class="container__wide">
+        <div class="grid_container2">
             <div class="image_container2">
                 <img src="./assets/kamil-kalbarczyk-09mTGfqKZ-s-unsplash.png" alt="trees" class="image">
             </div>
@@ -258,14 +294,14 @@
                     consectetur adipiscing elit. Suspendisse at accumsan neque, maximus mattis sapien. Class aptent
                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 </p>
-                <button class="button1">Find out how you can help <img src="./assets/add-sharp%20(1)-1.svg"
-                                                                       alt="add sign"></button>
+                <button class="button1"><span>Find out how you can help </span><img
+                        src="./assets/add-sharp%20(1)-1.svg" alt="add sign"></button>
             </div>
         </div>
     </div>
 </section>
 <section class="featured">
-    <div class="container" style="width: min(1400px, 100vw); max-width: 1320px;">
+    <div class="container__wide">
         <!--   <div class="glide__arrows" data-glide-el="controls">
                <button class="glide__arrow glide__arrow&#45;&#45;left" data-glide-dir="<"><span class="iconify"
                                                                                         data-icon="ion-arrow-back-sharp"
@@ -283,7 +319,7 @@
     </div>
 </section>
 <section>
-    <div class="background-video-container">
+    <div class="container-fluid">
         <div class="video-wrapper">
             <video class="background-video"
                    src="./assets/video.mp4"
@@ -293,21 +329,35 @@
             <div class="content-wrapper">
                 <p>Nulla consectetur sit amet elit at euismod. Phasellus dictum nibh in ex consectetur, quis
                     sollicitudin sem tristique. Mauris placerat vitae quam a faucibus. Integer pretium, ipsum non luctus
-                    mollis, nisl urna maximus nulla, nec efficitur justo dolor id sem. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Suspendisse at accumsan neque, maximus mattis sapien. Class aptent
-                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    mollis, nisl urna maximus nulla, nec efficitur justo dolor id sem.</p>
             </div>
         </div>
 
     </div>
 </section>
-<section class="newsletter">
+<!--<section class="newsletter">
     <h1 class="newsletter-h1">Stay in contact !</h1>
     <p class="newsletter-p">Vivamus malesuada dapibus mi, vitae ultricies enim euismod et. Proin semper commodo nibh, ut
         efficitur tortor dictum nec. Donec euismod elementum dolor, at aliquet neque feugiat a. Morbi sed nulla vitae ex
         scelerisque feugiat. Mauris in velit mi.</p>
-    <input type="email" placeholder="enter your email address">
-    <button class="button3">Subscribe to our Newsletter</button>
+    <div class="input-field">
+        <input type="email" placeholder="enter your email address">
+        <button class="button3">Subscribe to our Newsletter</button>
+    </div>
+</section>-->
+<section class="container__wide pb-5 pt-5">
+    <div class="col-6 newsletter">
+        <h1 class="newsletter-h1">Stay in contact !</h1>
+        <p class="newsletter-p">Vivamus malesuada dapibus mi, vitae ultricies enim euismod et. Proin semper commodo
+            nibh, ut
+            efficitur tortor dictum nec. Donec euismod elementum dolor, at aliquet neque feugiat a. Morbi sed nulla
+            vitae ex
+            scelerisque feugiat. Mauris in velit mi.</p>
+        <div class="input-field">
+            <input type="email" placeholder="enter your email address">
+            <button class="button3">Subscribe to our Newsletter</button>
+        </div>
+    </div>
 </section>
 <footer>
     <p class="footer-p">@2021 Lipsum eCommerce</p>
@@ -316,6 +366,30 @@
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script type="module" src="master.js"></script>
+<script>
+    function toggleSideMenu() {
+        var x = document.getElementById("side-menu");
+        if (x.style.transform === "translateX(0px)") {
+
+            x.style.transform = "translateX(-100%)";
+        } else {
+            console.log("am intrat in else");
+            x.style.transform = "translateX(0)";
+        }
+    }
+</script>
+<script>
+    function toggleCartModal() {
+        var x = document.getElementById("cart-modal");
+        if (x.style.transform === "translateX(0px)") {
+
+            x.style.transform = "translateX(100%)";
+        } else {
+            console.log("am intrat in else");
+            x.style.transform = "translateX(0)";
+        }
+    }
+</script>
 <!--<script src="products.js"></script>-->
 <script>
     const config = {
